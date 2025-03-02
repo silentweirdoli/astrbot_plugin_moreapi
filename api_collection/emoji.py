@@ -130,7 +130,7 @@ def fetch_image(qq_number, flag):
     # 获取对应的函数并执行
     url = switch_dict.get(flag, '')
     params = {
-        'QQ': qq_number
+        'QQ': str(qq_number)
     }
     response = requests.get(url, params=params)
     result = MessageChain()
